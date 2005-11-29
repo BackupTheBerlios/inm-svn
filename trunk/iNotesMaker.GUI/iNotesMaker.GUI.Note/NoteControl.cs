@@ -16,44 +16,35 @@
  *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
  
- using Glade;
- using Gtk;
  using System;
- using iNotesMaker.GUI;
+ using Gtk;
+ using System.Drawing;
  
- namespace iNotesMaker.GUI.Dialogs {
+ namespace iNotesMaker.GUI {
  	
- 	public class MainWindow {
+ 	public class Note : Gtk.DrawingArea {
  		
- 		[Widget] Gtk.Viewport viewportNote;
- 		[Widget] Gtk.Window mainDialog;
- 		
- 		public MainWindow( ) {
- 			
- 			Glade.XML gxml = new Glade.XML (null, "gui.glade", "mainDialog", null);
- 			gxml.Autoconnect (this);
- 			
- 			viewportNote.Add(new Note() );
- 			
- 			mainDialog.ShowAll();
- 		}
- 		
- 		private void MainDialog_DeleteEvent( object o, Gtk.DeleteEventArgs args ) {
- 			
- 			Application.Quit();
- 			args.RetVal = true;
- 		}
- 		
- 		private void mnuQuit_Activate( object o, EventArgs args ) {
- 			
- 			Application.Quit();
- 		}
- 		
+ 		/* START TEST CODE */
+		public Note ()
+		{
+			SetSizeRequest (200, 200);
+		}
+				       
+		protected override bool OnExposeEvent (Gdk.EventExpose args)
+		{
+			using (Graphics g = Gtk.DotNet.Graphics.FromDrawable (args.Window)){
+				g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+				Pen p = new Pen (Color.Blue, 1.0f);
+
+				for (int i = 0; i < 600; i += 60)
+					for (int j = 0; j < 600; j += 60)
+						g.DrawLine (p, i, 0, 0, j);
+			}
+			return true;
+		}
+		/* END TEST CODE */
+ 	
  	}
  	
  }
- 
- 		
- 			
- 
  

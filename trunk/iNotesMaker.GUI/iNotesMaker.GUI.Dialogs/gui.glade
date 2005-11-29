@@ -3,7 +3,7 @@
 
 <glade-interface>
 
-<widget class="GtkWindow" id="MainDialog">
+<widget class="GtkWindow" id="mainDialog">
   <property name="width_request">786</property>
   <property name="height_request">602</property>
   <property name="visible">True</property>
@@ -126,7 +126,7 @@
 	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
 	      <child>
-		<widget class="GtkViewport" id="viewport1">
+		<widget class="GtkViewport" id="viewportNote">
 		  <property name="visible">True</property>
 		  <property name="shadow_type">GTK_SHADOW_IN</property>
 
