@@ -1,0 +1,16 @@
+<Combine name="iNotesMaker.GUI.Dialogs" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.GUI.Dialogs" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.GUI.Dialogs" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="iNotesMaker.GUI.Dialogs" single="True">
+    <Execute type="None" entry="iNotesMaker.GUI.Dialogs" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./iNotesMaker.GUI.Dialogs.mdp" />
+  </Entries>
+</Combine>

@@ -1,0 +1,16 @@
+<Combine name="iNotesMaker.Core.DataBase" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.Core.DataBase" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.Core.DataBase" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="iNotesMaker.Core.DataBase" single="True">
+    <Execute type="None" entry="iNotesMaker.Core.DataBase" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./iNotesMaker.Core.DataBase.mdp" />
+  </Entries>
+</Combine>

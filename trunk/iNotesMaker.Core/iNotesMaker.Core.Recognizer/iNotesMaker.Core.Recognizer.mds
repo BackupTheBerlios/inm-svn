@@ -1,0 +1,16 @@
+<Combine name="iNotesMaker.Core.Recognizer" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.Core.Recognizer" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker.Core.Recognizer" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="iNotesMaker.Core.Recognizer" single="True">
+    <Execute type="None" entry="iNotesMaker.Core.Recognizer" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./iNotesMaker.Core.Recognizer.mdp" />
+  </Entries>
+</Combine>
