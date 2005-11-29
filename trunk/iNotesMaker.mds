@@ -3,18 +3,22 @@
     <Configuration name="Debug" ctype="CombineConfiguration">
       <Entry configuration="Debug" build="True" name="iNotesMaker.Core" />
       <Entry configuration="Debug" build="True" name="iNotesMaker.GUI" />
+      <Entry configuration="Debug" build="True" name="iNotesMaker" />
     </Configuration>
     <Configuration name="Release" ctype="CombineConfiguration">
       <Entry configuration="Debug" build="True" name="iNotesMaker.Core" />
       <Entry configuration="Debug" build="True" name="iNotesMaker.GUI" />
+      <Entry configuration="Debug" build="True" name="iNotesMaker" />
     </Configuration>
   </Configurations>
   <StartMode startupentry="iNotesMaker.Core" single="True">
     <Execute type="None" entry="iNotesMaker.Core" />
     <Execute type="None" entry="iNotesMaker.GUI" />
+    <Execute type="None" entry="iNotesMaker" />
   </StartMode>
   <Entries>
     <Entry filename="./iNotesMaker.Core/iNotesMaker.Core.mds" />
     <Entry filename="./iNotesMaker.GUI/iNotesMaker.GUI.mds" />
+    <Entry filename="./iNotesMaker/iNotesMaker.mdp" />
   </Entries>
 </Combine>

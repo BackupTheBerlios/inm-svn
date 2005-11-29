@@ -1,0 +1,16 @@
+<Combine name="iNotesMaker" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry configuration="Debug" build="True" name="iNotesMaker" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="iNotesMaker" single="True">
+    <Execute type="None" entry="iNotesMaker" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./iNotesMaker.mdp" />
+  </Entries>
+</Combine>
