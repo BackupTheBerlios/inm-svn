@@ -11,10 +11,10 @@
       <Entry configuration="Debug" build="True" name="iNotesMaker" />
     </Configuration>
   </Configurations>
-  <StartMode startupentry="iNotesMaker.Core" single="True">
+  <StartMode startupentry="iNotesMaker.Core" single="False">
     <Execute type="None" entry="iNotesMaker.Core" />
     <Execute type="None" entry="iNotesMaker.GUI" />
-    <Execute type="None" entry="iNotesMaker" />
+    <Execute type="Execute" entry="iNotesMaker" />
   </StartMode>
   <Entries>
     <Entry filename="./iNotesMaker.Core/iNotesMaker.Core.mds" />
