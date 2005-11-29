@@ -23,20 +23,25 @@
  
  namespace iNotesMaker.GUI.Dialogs {
  	
- 	public class MainWindow {
+ 	public class MainDialog {
  		
+ 			// A control in GTK is called a widget and this is how we define them
  		[Widget] Gtk.Viewport viewportNote;
  		[Widget] Gtk.Window mainDialog;
  		
- 		public MainWindow( ) {
+ 		
+ 		public MainDialog( ) {
  			
+ 									// Parses the gui.glade file and will generate the gui		
  			Glade.XML gxml = new Glade.XML (null, "gui.glade", "mainDialog", null);
- 			gxml.Autoconnect (this);
  			
- 			viewportNote.Add(new Note() );
+ 			gxml.Autoconnect (this);		// Connects widgets and their event handlers
+ 				
+ 			viewportNote.Add(new Note() );	 // We are creating a NoteControl inside the scroll box
  			
- 			mainDialog.ShowAll();
+ 			mainDialog.ShowAll();	// we show all controls on the form just in case :P
  		}
+ 		
  		
  		private void MainDialog_DeleteEvent( object o, Gtk.DeleteEventArgs args ) {
  			
