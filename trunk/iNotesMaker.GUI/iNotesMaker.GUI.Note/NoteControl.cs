@@ -22,29 +22,39 @@
  
  namespace iNotesMaker.GUI {
  	
- 	public class Note : Gtk.DrawingArea {
+ 	public class Note : DrawingArea {
  		
- 		/* START TEST CODE */
-		public Note ()
-		{
-			SetSizeRequest (200, 200);
-		}
-				       
-		protected override bool OnExposeEvent (Gdk.EventExpose args)
-		{
-			using (Graphics g = Gtk.DotNet.Graphics.FromDrawable (args.Window)){
-				g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-				Pen p = new Pen (Color.Blue, 1.0f);
-
-				for (int i = 0; i < 600; i += 60)
-					for (int j = 0; j < 600; j += 60)
-						g.DrawLine (p, i, 0, 0, j);
-			}
+		
+		protected override bool OnButtonPressEvent ( Gdk.EventButton args ) {
+			
 			return true;
 		}
-		/* END TEST CODE */
- 	
+		
+		
+		protected override bool OnMotionNotifyEvent( Gdk.EventMotion args ) {
+	        	
+			return true;	  
+		}
+		
+		protected override bool OnConfigureEvent( Gdk.EventConfigure args ) {
+
+			return true;	        	
+		}
+		
+		protected override bool OnExposeEvent ( Gdk.EventExpose args ) {
+			
+			System.Drawing.Graphics gfx = Gtk.DotNet.Graphics.FromDrawable(args.Window);
+			gfx.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+	        	System.Drawing.Pen pen = new System.Drawing.Pen( System.Drawing.Color.Black );
+			
+	        	gfx.DrawLine(pen, 10,20,30,40);
+	        	
+	        	return true;
+	        }  
+		
  	}
  	
  }
+ 
  
