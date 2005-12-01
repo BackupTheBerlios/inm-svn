@@ -36,8 +36,7 @@
  			Glade.XML gxml = new Glade.XML (null, "gui.glade", "mainDialog", null);
  			
  			gxml.Autoconnect (this);		// Connects widgets and their event handlers
- 				
- 			viewportNote.Add(new Note() );	 // We are creating a NoteControl inside the scroll box
+ 			viewportNote.Add( new Note.Control() );	 // We are creating a NoteControl inside the scroll box
  			
  			mainDialog.ShowAll();	// we show all controls on the form just in case :P
  		}
